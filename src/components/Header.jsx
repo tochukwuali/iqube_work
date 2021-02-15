@@ -1,22 +1,54 @@
-import { useState } from "react";
-
 const Header = (props) => {
-    const style = {
-      color: 'orange'
+let lineIndicator = {}
+
+  if (props.step === 1) { 
+     lineIndicator = {
+      height: '7px',
+      borderRadius: '30px',
+      backgroundColor: 'orange',
+      width: '25%',
+      marginLeft: '0',
+      marginTop: '-4px'
+    } }
+  
+  if(props.step === 2) {
+    lineIndicator = {
+      height: '7px',
+      borderRadius: '30px',
+      backgroundColor: 'orange',
+      width: '20%',
+      marginLeft: '38%',
+      marginTop: '-4px'
     }
+  }
+  if(props.step === 3) {
+    lineIndicator = {
+      height: '7px',
+      borderRadius: '30px',
+      backgroundColor: 'orange',
+      width: '20%',
+      marginLeft: '40%',
+      marginTop: '-4px'
+    }
+  }
      return (
         <>
           <h1>Complete your Purchase</h1>
           <div className="form-nav">
               <div>
-                <p>Personal Info</p>
+                <h4>Personal Info</h4> 
               </div>
               <div>
-                <p>Billing Info</p>
+                <h4>Billing Info</h4>
               </div>
               <div>
-                <p>Confim Payment</p>
+                <h4>Confim Payment</h4>
               </div>
+          </div>
+          <div className="nav-line">
+            <div style={lineIndicator}>
+               
+            </div>
           </div>
         </>
     )

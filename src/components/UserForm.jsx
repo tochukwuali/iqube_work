@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import FormPersonalInfo from './FormPersonalInfo'
 import FormCardInfo from './FormCardInfo'
+import FormBillingInfo from './FormBillingInfo'
 
 const UserForm = () => {
    const initialState = {
@@ -56,10 +57,13 @@ const UserForm = () => {
               prevStep={prevStep}
               handleChange={handleChange}
               values={values}
+              step={step}
             />
         )
       case 3: 
-        return <h1>Billing Info2</h1>
+        return (
+          <FormBillingInfo step={step}/>
+        )
   }
       
 }
